@@ -6,11 +6,12 @@ describe('creates a server that responds with a static HTML file', () => {
     const call = (data) => {
       request(data, (error, response, body) => {
         expect(body).toEqual(`<html>
-        <head><title>Hello Handling</title></head>
-        <body>
-            Hello Handling
-        </body>
-    </html>`);
+<head><title>Hello Handling</title></head>
+<body>
+Hello Handling
+</body>
+</html>
+`);
         done();
       });
     };
