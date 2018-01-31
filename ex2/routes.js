@@ -12,10 +12,10 @@ const routes = (name, callback) => {
     path: '/{name}',
     method: 'GET',
     handler: (request, reply) => reply(`Hello ${request.params.name}`),
-  // reply();,
   });
   server.start(() => {
     const url = `${server.info.uri}/${name}`;
+    console.log(url);
     callback(url);
   });
 };

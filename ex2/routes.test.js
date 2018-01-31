@@ -11,13 +11,13 @@ describe('creates a server that listens on the input port', () => {
     };
     routes('arpita', call);
   });
-  // it('returns Hello when an http request is sent with no path parameter', (done) => {
-  //   const call = (data) => {
-  //     request(data, (error, response, body) => {
-  //       expect(body).toEqual('Hello');
-  //       done();
-  //     });
-  //   };
-  //   routes('/', call);
-  // });
+  it('returns Hello when an http request is sent with no path parameter', (done) => {
+    const call = (data) => {
+      request(data, (error, response, body) => {
+        expect(body).toEqual('Hello');
+        done();
+      });
+    };
+    routes('', call);
+  });
 });
