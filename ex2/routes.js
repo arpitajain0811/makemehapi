@@ -15,7 +15,7 @@ const routes = (name, callback) => {
   });
   server.start(() => {
     const url = `${server.info.uri}/${name}`;
-    console.log(url);
+    // console.log(url);
     callback(url);
   });
 };
